@@ -1,0 +1,465 @@
+@font-face {
+    font-family: museo_reg;
+    src: url("/fonts/museo300.otf");
+}
+@font-face {
+    font-family: museo_head;
+    src: url("/fonts/museo900.otf");
+}
+body{
+	  background: rgba(238, 238, 238, 0.49);
+
+}
+
+.tint {
+	position: relative;
+	float: left;
+}
+	.navbar-default .navbar-nav>.active>a{
+		border-bottom: 2px solid #555 !important;
+		background-color: transparent !important;
+	}
+.tint{
+	width:100%;
+}
+.bottom-bar{
+	width:100%;
+
+}
+@media (min-width: 1200px){
+.container {
+  width: 1270px;
+}
+}
+
+.tint:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0, 0.5);
+	-moz-transition: background .3s linear;
+	-webkit-transition: background .3s linear;
+	-o-transition: background .3s linear;
+	transition: background .3s linear;
+}
+.tint .desc {
+	  display:block;
+	  position:absolute;
+	  width:100%;
+	  top:30%;
+	  left:0;
+	/*  z-index:2;*/
+	  text-align:center;
+	  color:white;
+	 
+font-family: museo_head !important;
+	}
+	.post{
+		font-family: museo_reg !important;
+	}
+	.tint .desc2 {
+	  display:block;
+	  position:absolute;
+	  width:100%;
+	  top:65%;
+	  left:0;
+	 /* z-index:2;*/
+	  text-align:center;
+	  color:white;
+font-family: museo_reg !important;
+	}
+
+.pagination>.active>a{
+	background-color: rgb(237,69,37);
+	border:1px solid rgb(237,69,37);
+}
+
+  .orange {
+  	width: 100%;
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    z-index:2;
+    cursor: pointer;
+ 
+  }
+  
+  .orange:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: none ;
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+  
+  .orange:hover:before {
+    background:rgba(237,69,37,0.5);
+      -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+  }
+
+
+.tint .stf {
+	  display:block;
+	  position:absolute;
+	  top:80%;
+	  right:70%;
+	  left:0;
+	/*  z-index:2;*/
+	  text-align:center;
+	  color:white !important;
+	font-family: museo_reg !important;
+	}
+	a{
+	color:inherit;
+	}
+
+#bottom-cards{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+@media (min-width: 992px){
+.col-md-4 {
+  width: 30%;
+  margin-right: 16px;
+}
+.tint .desc{
+	 font-size:45px;
+}
+.tint img{
+	width:100%;
+	height: 570px;
+}
+  #card{
+  	width: 46%;
+  	margin-left: auto;
+  	margin-right: auto;
+  }
+.share-buttons li>a{
+	padding: 10px;
+	margin-right: 10px;
+	color:white;
+	font-family: museo_head;
+}
+
+.share-buttons span{
+	font-size: 22px;
+	font-family: museo_reg;
+	color:#0d316b;
+	font-weight: 0;
+}
+
+ul.share-buttons li{
+  display: inline;
+}
+.bottom-bar{
+		margin-left: 20px;
+}
+}
+#bottom-thumb {
+	height:170px !important;
+	width: 100%;
+}
+.label-default{
+	background-color:  rgb(237,69,37);
+}
+
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+}
+p{
+  	font-size: 18px;
+  }
+  @media (min-width: 768px){
+  	 #card{
+  	width: 50%;
+  	margin-left: auto;
+  	margin-right: auto;
+  }
+  }
+@media (max-width: 768px){
+	.share-buttons li {
+		width: 60%;
+		margin-bottom: 20px;
+	}
+	.tint h1{
+		font-size: 27px;
+	}
+	.tint img{
+	width:100%;
+	height: 450px;
+}
+	#bottom-cards{
+		  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+	}
+	 #card{
+  	width: 85%;
+  	margin-left: auto;
+  	margin-right: auto;
+  }
+
+	.share-buttons li>a{
+	padding: 8px;
+	color:white;
+	font-family: museo_head;
+}
+.share-buttons li>a:hover{
+	color:white;
+	background-color: rgb(237,69,37);
+	   -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+.share-buttons span{
+	font-size: 22px;
+	font-family: museo_reg;
+	color:#0d316b;
+}
+}
+
+#fb{
+background: #3a5795;
+border: 3px solid #3a5795;
+border-radius: 4px;
+}
+#fb:hover{
+background: white;
+color: #3a5795;
+ -moz-transition: all .3s linear;
+-webkit-transition: all .3s linear;
+-ms-transition: all .3s linear;
+-o-transition: all .3s linear;
+transition: all .3s linear;
+}
+#tw{
+	background: #00aced;
+border: 3px solid #00aced;
+border-radius: 4px;
+}
+#tw:hover{
+background: white;
+color: #00aced;
+-moz-transition: all .3s linear;
+-webkit-transition: all .3s linear;
+-ms-transition: all .3s linear;
+-o-transition: all .3s linear;
+transition: all .3s linear;
+}
+#in{
+background: #007bb6;
+border: 3px solid #007bb6;	
+border-radius: 4px;
+}
+#in:hover{
+background: white;
+color: #007bb6;
+-moz-transition: all .3s linear;
+-webkit-transition: all .3s linear;
+-ms-transition: all .3s linear;
+-o-transition: all .3s linear;
+transition: all .3s linear;
+}
+#gl{
+background: #dd4b39;
+border: 3px solid #dd4b39;
+border-radius: 4px;
+}
+#gl:hover{
+background: white;
+color: #dd4b39;
+-moz-transition: all .3s linear;
+-webkit-transition: all .3s linear;
+-ms-transition: all .3s linear;
+-o-transition: all .3s linear;
+transition: all .3s linear;
+}
+
+	body{
+	font-family:  museo_reg !important;
+	}
+#label{
+	background-color: rgb(237,69,37);
+	color:white !important;
+}
+#label a{
+	color:white !important;
+}
+
+  .tint img{
+  	display: block;
+  }
+ 
+  #thumb{
+  	width: 100%;
+  	height: 270px;
+  }
+
+  .meta{
+  	color:#eD4525;
+  	font-weight: bold;
+  }
+#body > ul{
+	  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: museo_head;
+  font-size: 17px;
+}
+.body-container{
+	width:95%;
+	margin-left: 17px;
+	margin-right: auto;
+	font-size: 17px;
+	line-height: 1.7;
+	float: left;
+}
+#first{
+	width: 40%;
+	float: left;
+	margin-right: 10%;
+	background: transparent;
+	color: white;
+		border-bottom: 3px solid white;
+	border-left: 0px solid transparent;
+	border-right: 0px solid transparent;
+	border-top: 0px solid transparent;
+}
+
+	::-webkit-input-placeholder { 
+    color:    white !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    white;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    white;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    white;
+}
+.btn-default{
+	border:3px solid #eD4525;
+	background-color: transparent;
+	color: #eD4525;
+	font-family: museo_head;
+}
+#last{
+	width: 40%;
+	float: right;
+	background: transparent;
+	color: white;
+	border-bottom: 3px solid white;
+	border-left: 0px solid transparent;
+	border-right: 0px solid transparent;
+	border-top: 0px solid transparent;
+}
+.subscribe{
+	background-image: url('/images/main-bg.png');
+	color: white;
+	padding: 18px;
+	border:1px solid #0d316b;
+	border-radius: 5px;
+}
+#email{
+	background: transparent;
+	color: white;
+	border-bottom: 3px solid white;
+	border-left: 0px solid transparent;
+	border-right: 0px solid transparent;
+	border-top: 0px solid transparent;
+}
+
+@media (min-width: 768px){
+/*.col-sm-6 {
+  width: 90%;
+}*/
+#fb,#tw,#in,#gl {
+  padding: 10px;
+  color: white;
+  font-family: museo_reg;
+}
+.share-buttons li{
+	margin-bottom: 20px;
+}
+}
+
+ #body > ul > li > a{ color: #0d316b;
+  border-bottom: 3px solid #eD4525;
+}
+ #body > ul > li > a:hover{ color: #fff;
+  background-color: #0d316b;
+  border-bottom: 3px solid #eD4525;
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+}
+#body > div > div > div > div{
+
+}
+h1,h2,h3{
+	font-family: museo_head !important;
+	color: #0d316b;
+}
+				
+				body{
+					 font-family: museo_reg;
+				}
+				a{
+					text-decoration: none !important;
+					color: inherit;
+				}
+				h3{
+					
+				}
+				.text-muted{
+					font-size: 16px;
+				}
+
+				.read-more{
+					color:rgb(237,69,37);
+				}
+
+				.thumbnail{
+					padding-left: 0px;
+					padding-right: 0px;
+					padding-top: 0px;
+					border:0px solid white;
+					border-radius: 10px;
+				}
+				@media (min-width: 1200px){
+.container {
+  width: 1209px;
+}}
+	#blah{
+		padding-right: 0px !important;
+	}
+	.navbar-default .navbar-nav>.active>a{
+		border-bottom: 2px solid #555 !important;
+		background-color: transparent !important;
+	}
+

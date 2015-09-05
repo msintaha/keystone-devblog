@@ -1,0 +1,39 @@
+
+
+<img src="/images/main-bg.png" style="width:100%"> 
+<br><br>
+	<ul class="nav nav-pills nav-justified">
+  <li role="presentation" ><a href="/blog" class="false list-group-item">All Categories</a></li>
+  {{# each data.categories }}
+  <li role="presentation"><a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a></li>
+				{{/each}}
+</ul>
+
+<br><br>
+<div class="container">
+		
+{{# each data.posts.results}}	
+
+    <div class="thumbnail" id="card">
+<a href="{{postUrl slug}}"><figure class="orange">
+      <img id="thumb" src="{{{image.secure_url}}}">
+</figure></a>
+      <div class="caption">
+      <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
+        <a href="{{postUrl slug}}"><h3>{{{title}}}</h3></a>
+<p class="lead text-muted">Posted in <span class="label label-success" id="label">{{{categoryList categories}}}</span>
+							{{#if author.name.first}}by {{author.name.first}}{{/if}}
+					</p>
+					<p>{{{content.brief}}}</p>
+				
+        <p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>
+      </div>
+      </div>
+    </div>
+
+  {{/each}}
+  {{>pagination}}
+</div>
+
+	
+

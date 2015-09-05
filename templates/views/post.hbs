@@ -1,0 +1,112 @@
+<style>
+body{
+	background:#fff;
+}
+</style>
+	{{#contentFor "meta"}}
+        <meta property="og:title" content="{{data.post.title}}" />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="{{{data.post.content.brief}}}" />
+        <meta property="og:url" content="{{postUrl data.post.slug}}" />
+        <meta property="og:image" content="{{data.post.image.secure_url}}" />
+        <meta property="og:image:width" content="100" />
+         <meta property="og:image:height" content="100" />
+    {{/contentFor}}
+
+<figure class="tint">
+ <img src="{{{data.post.image.secure_url}}}">
+ <h1 class="desc">{{data.post.title}}</h1><br>
+ <p class="desc2">{{date data.post.publishedDate}} 
+
+ </p>
+ <h3 class="stf"><span class="label label-default" style="color:white !important;">{{{categoryList data.post.categories}}}</span></h3>
+ </figure>
+<div class="container">
+	<div class="row">
+		<div class="body-container"><br>
+			<article><br>
+				<p><a href="/blog">&larr; back to the blog</a></p>
+				<hr>
+				<header>
+					<h1>{{data.post.title}}</h1>
+					<h4 class="meta">
+					{{date data.post.publishedDate}} | {{{categoryList data.post.categories prefix="Posted in "}}}
+						{{#if author.name.first}}by {{author.name.first}}{{/if}}
+					</h4>
+				</header>
+
+				<div class="post">
+					{{{data.post.content.extended}}}
+				</div>
+			</article>
+			<br><br>
+
+<ul class="share-buttons">
+<li>
+<a id="fb" href="http://www.facebook.com/sharer.php?t={{data.post.title}}&u={{postUrl data.post.slug}}" title="Share on Facebook" target="_blank"><i class="fa fa-facebook"></i>&nbsp; Share on Facebook</a>
+  </li>
+  <li>
+<a id="tw" target="_blank" href="https://twitter.com/i ntent/tweet?text={{data.post.title}}&url={{postUrl data.post.slug}}" title="Share on Twitter"><i class="fa fa-twitter"></i>&nbsp; Share on Twitter</a>
+  </li>
+  <li>
+<a id="in" target="_blank" title="Share on LinkedIn" href="https://www.linkedin.com/cws/share?url={{postUrl data.post.slug}}"><i class="fa fa-linkedin-square"></i>&nbsp; Share on Linkedin</a>
+  </li>
+   <li>
+<a id="gl" target="_blank" title="Share on Google+" href="https://plus.google.com/share?url={{postUrl data.post.slug}}"><i class="fa fa-google-plus"></i>&nbsp; Share on Google+</a>
+  </li>
+</ul>
+
+<br><br>
+	<div class="bottom-bar">
+		<h2>Latest posts</h2>	
+			<ul class="nav nav-pills nav-justified">
+				{{# each data.posts }}
+					<div class="col-md-4" id="bottom-cards">
+                   		<div class="thumbnail">
+   <a href="{{postUrl slug}}"><figure class="orange">
+      <img id="bottom-thumb" src="{{{image.secure_url}}}">
+      </figure></a>
+	   	<div class="caption">
+	   		<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
+	       		<a href="{{postUrl slug}}"><h3 style="color:rgb(237,69,37);">{{{title}}}</h3></a>
+             </div>
+          </div>
+       </div>
+
+   	</div>
+                {{/each}} 
+                </ul>		
+
+		</div>
+
+    <form class="subscribe" action="/subscribe" method="post">
+   <h4> Subscribe to our Newsletter:</h4>
+  <!--  <div class="form-group">
+    <input type="text" class="form-control" placeholder="First Name" id="first">
+    <input type="text" class="form-control" placeholder="Last Name" id="last"><br>
+  </div> -->
+ <div class="form-group">
+<input type="text" class="form-control" placeholder="E-mail" id="email">
+  </div>
+  <button type="submit" class="btn btn-default">Subscribe</button>
+    </form>
+		</div>
+	</div>
+<br><br>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'webabledevelopers';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+
